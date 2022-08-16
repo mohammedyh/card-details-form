@@ -1,0 +1,196 @@
+.app-layout {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.sidebar {
+	height: 100vh;
+	background: url('/images/bg-main-desktop.png') top center/cover no-repeat;
+}
+
+label {
+	margin-top: 1.4rem;
+	margin-bottom: 0.4rem;
+	display: block;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+input {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid hsl(270, 3%, 87%);
+	border-radius: 7px;
+	background: none;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	padding: 0.6rem 0;
+	border: none;
+	border-radius: 6px;
+	margin-top: 2rem;
+	width: 100%;
+	display: block;
+	background: hsl(278, 68%, 11%);
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+}
+
+form {
+	width: 400px;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.w-half {
+	width: 50%;
+}
+
+.form-error {
+	margin-top: 0.4rem;
+	font-size: 14px;
+	color: red;
+}
+
+.card {
+	width: 440px;
+	height: 240px;
+}
+
+.card-front {
+	position: absolute;
+	left: 10rem;
+	top: 7.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	color: white;
+	background: url('/images/bg-card-front.png') center center/contain no-repeat;
+}
+
+.card-back {
+	position: relative;
+	left: 15.5rem;
+	top: 25rem;
+	background: url('/images/bg-card-back.png') center center/contain no-repeat;
+}
+
+.cvc-content {
+	position: absolute;
+	right: 3.5rem;
+	top: 6.6rem;
+	color: #fff;
+	letter-spacing: 3px;
+}
+
+.card-content-wrapper {
+	padding: 2rem 2rem 1.2rem;
+}
+
+.name-expiry-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+
+.message-container {
+	display: flex;
+	width: 340px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.message-heading {
+	margin-bottom: 0;
+	font-size: 28px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.message-text {
+	margin-bottom: 0;
+	color: hsl(279, 6%, 55%);
+}
+
+@media screen and (max-width: 920px) {
+	.app-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.sidebar {
+		height: 22rem;
+	}
+
+	.card-front {
+		top: 10rem;
+		left: 1.5rem;
+		z-index: 2;
+	}
+
+	.card-back {
+		top: 1.5rem;
+		left: 8rem;
+		z-index: 1;
+	}
+
+	main {
+		margin-top: 5rem;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	form {
+		width: auto;
+	}
+
+	main {
+		margin: 3rem 1rem;
+	}
+
+	label {
+		font-size: 13px;
+	}
+
+	.card {
+		width: 375px;
+		height: 205px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.card {
+		width: 330px;
+		height: 185px;
+	}
+
+	.card-front {
+		left: 0.8rem;
+	}
+
+	.card-back {
+		left: 4.5rem;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	.card-front {
+		left: 0.5rem;
+	}
+
+	.card-back {
+		left: 2.2rem;
+	}
+}
