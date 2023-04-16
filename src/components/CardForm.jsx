@@ -111,7 +111,7 @@ function CardForm(props) {
 								<Field
 									id="cvc-number"
 									name="cvcNumber"
-									placeholder="e.g. 123"
+									placeholder="e.g. 789"
 									onKeyUp={e => props.updateCvc(e.target.value)}
 								/>
 								<div className="form-error">
