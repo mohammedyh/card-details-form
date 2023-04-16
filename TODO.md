@@ -1,0 +1,2 @@
+- [ ] Add ESLint
+- [ ] Add Husky and pre-commit hooks
