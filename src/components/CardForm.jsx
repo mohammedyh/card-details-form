@@ -7,28 +7,28 @@ import ThankYouMessage from './ThankYouMessage';
 
 function CardForm(props) {
 	const schema = Yup.object({
-		cardName: Yup.string().required("Can't be blank"),
+		cardName: Yup.string().required('Cardholder name cannot be blank'),
 		cardNumber: Yup.string()
 			.test(
 				'1',
 				'Credit Card number is invalid',
-				value => valid.number(value).isValid,
+				value => valid.number(value).isValid
 			)
 			.required(),
 		expiryMonth: Yup.string().test(
 			2,
 			'Invalid month',
-			value => valid.expirationMonth(value).isValid,
+			value => valid.expirationMonth(value).isValid
 		),
 		expiryYear: Yup.string().test(
 			3,
 			'Invalid year',
-			value => valid.expirationYear(value).isValid,
+			value => valid.expirationYear(value).isValid
 		),
 		cvcNumber: Yup.string().test(
 			4,
 			'Invalid CVC',
-			value => valid.cvv(value).isValid,
+			value => valid.cvv(value).isValid
 		),
 	});
 
