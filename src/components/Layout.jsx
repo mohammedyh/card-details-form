@@ -1,3 +1,5 @@
+import { formatAsCardNumber } from '../utils/formatAsCardNumber';
+
 function Layout({
 	cardNumber,
 	cardName,
@@ -11,7 +13,7 @@ function Layout({
 			<div className="sidebar">
 				<div className="card card-front">
 					<div className="card-content-wrapper">
-						<h2>{cardNumber || '0000 0000 0000 0000'}</h2>
+						<h2>{formatAsCardNumber(cardNumber) || '0000 0000 0000 0000'}</h2>
 						<div className="name-expiry-content">
 							<div>{cardName || 'Jane Appleseed'}</div>
 							<div>
